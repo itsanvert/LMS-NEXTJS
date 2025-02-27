@@ -7,8 +7,7 @@ const CourseIdPage = async ({ params }: { params: { courseId?: string } }) => {
   const userId = session?.userId;
 
   if (!userId) {
-    redirect("/");
-    return null;
+    return redirect("/");
   }
 
   if (!params?.courseId) {
@@ -23,7 +22,7 @@ const CourseIdPage = async ({ params }: { params: { courseId?: string } }) => {
   });
 
   if (!course) {
-    return "Hello";
+    return redirect("/");
   }
 
   // Check completion of required fields

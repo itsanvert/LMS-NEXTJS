@@ -39,9 +39,18 @@ const CreatePage = () => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       const response = await axios.post("/api/courses", values);
-      router.push(`/teacher/courses/${response.data.id}`);
+      console.log("API Response:", response.data); // ✅ Log response
+
+      if (!response.data.course || !response.data.course.id) {
+        console.error("Error: Course ID is undefined");
+        toast.error("Failed to create course. No ID returned.");
+        return;
+      }
+
+      router.push(`/teacher/courses/${response.data.course.id}`);
       toast.success("Course created successfully!");
     } catch (error) {
+      console.error("API Error:", error);
       toast.error("Something went wrong");
     }
   };
