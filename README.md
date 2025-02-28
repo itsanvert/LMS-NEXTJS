@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LMS-NEXTJS
 
-## Getting Started
+A modern Learning Management System (LMS) built with **Next.js**. This application provides a platform for students and instructors to interact, manage courses, track progress, and more. It leverages the power of **React**, **Next.js**, **Tailwind CSS**, and **TypeScript** to offer a responsive and user-friendly experience.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **User Authentication:** Secure login and registration for students and instructors.
+- **Course Management:** Create, update, and delete courses.
+- **Interactive UI:** With modern and responsive design using Tailwind CSS.
+- **Real-Time Updates:** Stay up-to-date with dynamic course content and user actions.
+- **Student Dashboard:** Track progress, assignments, and grades.
+- **Instructor Dashboard:** Manage courses, students, and assignments.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js:** A React framework for building server-side rendered applications.
+- **React:** JavaScript library for building user interfaces.
+- **TypeScript:** For type-safe development.
+- **Tailwind CSS:** Utility-first CSS framework for fast UI development.
+- **Prisma ORM:** For interacting with the database in a type-safe manner.
+- **Zod:** Type validation library for form and data validation.
+- **Axios:** HTTP client for making API requests.
+- **React Hook Form:** Form handling and validation library.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Setup
 
-## Learn More
+To get started with this project, follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Node.js** (v14 or above) and **npm** or **yarn** installed on your machine.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
+1. Clone this repository:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   git clone https://github.com/itsanvert/LMS-NEXTJS.git
+   cd LMS-NEXTJS
