@@ -25,8 +25,8 @@ export async function POST(req: Request) {
         title,
       },
     });
-
-    console.log("Course created:", course); // Debugging line for created course
+    console.log("Created Course:", course); // Log the created course
+    // Debugging line for created course
 
     return NextResponse.json({ message: "Success", course });
   } catch (error) {
