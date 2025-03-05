@@ -13,15 +13,15 @@ const handleAuth = async () => {
 
 export const ourFileRouter = {
   courseImage: f({ image: { maxFileSize: "4MB", maxFileCount: 1 } })
-    .middleware(async () => await handleAuth()) // Await the async auth function
+    .middleware(handleAuth) // Directly pass handleAuth as it's already an async function
     .onUploadComplete(() => {}),
   courseAttachment: f(["text", "image", "video", "audio", "pdf"])
-    .middleware(async () => await handleAuth()) // Await the async auth function
+    .middleware(handleAuth) // Directly pass handleAuth
     .onUploadComplete(() => {}),
   chapterVideo: f({
     video: { maxFileCount: 1, maxFileSize: "512GB" },
   })
-    .middleware(() => handleAuth())
+    .middleware(handleAuth) // Directly pass handleAuth
     .onUploadComplete(() => {}),
 } satisfies FileRouter;
 
